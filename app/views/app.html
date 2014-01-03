@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block head %}
+	<script src="http://code.jquery.com/jquery-2.0.3.js">
+	</script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="/js/main.js"></script>
+{% endblock %}
+{% block content %}
+<h2>Bienvenido {{user}}</h2>
+	<a href="/log-out">Log Out</a>
+<lu id="users">
+	{% for person in users %}
+		<li>{{person}}</li>
+	{% endfor %}
+</lu>
+{% endblock %}
